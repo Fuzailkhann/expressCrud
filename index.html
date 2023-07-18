@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header><h1>Products</h1></header>
+    <main>
+        <section id="sec" >
+            <h1>Pivotchain Solutions</h1>
+            <h2>Create Your Product Here</h2>
+            <form id="input-form" action="">
+                <label for="name">Name</label>
+                <input type=" text" required id="name">
+                <label for="description" >Description</label>
+                <textarea name="description" id="description" cols="1" rows="10"></textarea>
+                <label for="price" >Price</label>
+                <input type="text" id="price" required step="0.01" >
+                <button type="submit" >submit</button>
+            </form>
+
+            <h2>Product list</h2>
+            <ul id="product-list" ></ul>
+
+
+
+        </section>
+    </main>
+
+    <script src="./script.js" ></script>
+</body>
+</html>
