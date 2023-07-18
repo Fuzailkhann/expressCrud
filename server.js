@@ -24,7 +24,8 @@ app.get('/products', (req, res) => {
   res.json(products);
 });
 
-// Get a specific product
+
+
 app.get('/products/:id', (req, res) => {
   const productId = parseInt(req.params.id);
   const product = products.find(p => p.id === productId);
@@ -35,15 +36,14 @@ app.get('/products/:id', (req, res) => {
   }
 });
 
-// Create a new product
+
 app.post('/products', (req, res) => {
   const newProduct = req.body;
   newProduct.id = products.length + 1;
   products.push(newProduct);
   res.send('Product created successfully');
-});
+})
 
-// Update an existing product
 app.put('/products/:id', (req, res) => {
   const productId = parseInt(req.params.id);
   const updatedProduct = req.body;
@@ -55,8 +55,6 @@ app.put('/products/:id', (req, res) => {
     res.status(404).send('Product not found');
   }
 });
-
-// Delete a product
 app.delete('/products/:id', (req, res) => {
   const productId = parseInt(req.params.id);
   const productIndex = products.findIndex(p => p.id === productId);
